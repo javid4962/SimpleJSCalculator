@@ -76,3 +76,36 @@ function showHistory(){
     }
 }
 
+
+
+const lightThemeBtn = document.getElementById('lightThemeBtn');
+const darkThemeBtn = document.getElementById('darkThemeBtn');
+
+lightThemeBtn.addEventListener('click', () => {
+  document.documentElement.style.setProperty('--primary-color', '#f6f6f6');
+  document.documentElement.style.setProperty('--secondary-color', '#000');
+  document.documentElement.style.setProperty('--border-color', '#000');
+  document.documentElement.style.setProperty('--text-color', '#000');
+  document.documentElement.style.setProperty('--number-color', '#a4a4a4');
+  document.documentElement.style.setProperty('--operation-color', '#ff9601');
+  document.documentElement.style.setProperty('--equal-bg-color', '#a7a7a7');
+  document.documentElement.style.setProperty('--clear-color', '#f00');
+  localStorage.setItem('theme', 'light');
+});
+
+darkThemeBtn.addEventListener('click', () => {
+  document.documentElement.style.setProperty('--primary-color', '#000');
+  document.documentElement.style.setProperty('--secondary-color', '#fff');
+  document.documentElement.style.setProperty('--border-color', '#000');
+  document.documentElement.style.setProperty('--text-color', '#fff');
+  document.documentElement.style.setProperty('--number-color', '#343434');
+  document.documentElement.style.setProperty('--operation-color', '#ff9601');
+  document.documentElement.style.setProperty('--equal-bg-color', '#a7a7a7');
+  document.documentElement.style.setProperty('--clear-color', '#f00');
+  localStorage.setItem('theme', 'dark');
+});
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  darkThemeBtn.click();
+}
