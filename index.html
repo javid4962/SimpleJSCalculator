@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleJSCalculator</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="imgGifs">
+            <img src="./public/icons8-history-100.png" class="displayResults" onclick="showHistory() "/>
+
+        </div>
+            
+            <div class="screen">
+                <input class="display" id="display" value="0" dir="ltr"></input>
+            </div>
+
+            <div class="numbersGrid">
+                <button class="number operation" id="plus" onclick="chooseOperation('+')">+</button>
+                <button class="number operation" id="minus" onclick="chooseOperation('-')">-</button>
+                <button class="number operation" id="multiply" onclick="chooseOperation('*')">*</button>
+                <button class="number operation" id="divide" onclick="chooseOperation('/')">/</button>
+                <button class="number operation" id="equal" onclick="calculate()">=</button>
+                <button class="number" id="7" onclick="appendNumber('7')">7</button>
+                <button class="number" id="8" onclick="appendNumber('8')">8</button>
+                <button class="number" id="9" onclick="appendNumber('9')">9</button>
+                <button class="number operation" id="modulo" onclick="chooseOperation('%')">%</button>
+                <button class="number" id="4" onclick="appendNumber('4')">4</button>
+                <button class="number" id="5" onclick="appendNumber('5')">5</button>
+                <button class="number" id="6" onclick="appendNumber('6')">6</button>
+                <button class="number" id="1" onclick="appendNumber('1')">1</button>
+                <button class="number" id="2" onclick="appendNumber('2')">2</button>
+                <button class="number" id="3" onclick="appendNumber('3')">3</button>
+                <button class="number" id="0" onclick="appendNumber('0')">0</button>
+                <button class="number" id="dot" onclick="appendNumber('.')">.</button>
+                <button class="number" id="clear" onclick="clearDisplay()">C</button>
+            </div>
+        </div>
+        <div class="results" id="listResults">
+        </div>
+    </div>
+
+    <script type="module" src="mongo.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

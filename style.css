@@ -1,0 +1,149 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+}
+
+.calculator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  background: #000;
+  border-radius: 1rem;
+}
+
+.screen {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  margin: 1rem;
+  padding: 5px;
+}
+
+.screen > input {
+  width: 20rem;
+  height: 5rem;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 2.8rem;
+  outline: none;
+}
+
+.numbersGrid {
+  display: grid;
+  grid-template-columns: 5rem 5rem 5rem 5rem;
+  grid-template-rows: 5rem 5rem 5rem 5rem 5rem;
+  grid-gap: 0.5rem;
+  margin: 1rem;
+}
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.operation,
+.number {
+  border-radius: 50%;
+  background: #343434;
+  color: #fff;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.2),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.923);
+}
+.operation {
+  background: #ff9601;
+  color: #000;
+}
+.operation:active,
+.number:active {
+  box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.4),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#equal {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  grid-column-start: 4;
+  grid-row: 3/6;
+  background: #a7a7a7;
+}
+#clear {
+  background: red;
+}
+.displayResults {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* margin: auto; */
+  float: left;
+  background: #000;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 0.1rem;
+  margin: 0.1rem;
+}
+.imgGifs {
+  width: 100%;
+  padding: 1rem;
+}
+.imgGifs > img {
+  padding: 0;
+  margin: 0;
+  width: 1.8rem;
+  border: 1px solid #fff;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.2),
+    inset -1px -1px 2px rgba(0, 0, 0, 0.923);
+  /* background: #fff; */
+}
+.imgGifs > img:active {
+  box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.4),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+#listResults {
+  display: none;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #000;
+  overflow: scroll;
+  box-shadow: 2px 2px 2px 2px #fff;
+  border-radius: 0 1rem 1rem 0;
+  transition-duration: 2s;
+}
+button {
+  border: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+li {
+  list-style: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
